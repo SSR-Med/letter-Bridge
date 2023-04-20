@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <!--Title-->
+    <title>Letter bridge</title>
+    <!--Icon link-->
+    <link rel="icon" href="/static/images/bridgeIcon.png" type="image/x-icon">
+    <!--Link css file-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='css/index.css') }}">
+</head>
+
+<body>
+    <script src="{{ url_for('static', path='js/index.js') }}"></script>
+    <!--Header-->
+    <header>
+        <img src="static/images/bridgeHeader.png" width="60" height="60">
+        <h1>LBridge</h1>
+        <nav>
+            <a href="\">Create</a>
+            <a href="check">Check</a>
+            <a href="#">Contact</a>
+            <a href="#">Profile</a>
+        </nav>
+    </header>
+    <main>
+        <!--Text and images-->
+        <h1>AI Bridge generator</h1>
+        <div class="images">
+            <img src="static/images/examples/one.png">
+            <img src="static/images/examples/two.png">
+            <img src="static/images/examples/three.png">
+            <img src="static/images/examples/four.png">
+        </div>
+        <p id="description"> Turn any sentence into a bridge letter, our model is based on the replication of evolution
+            (mutation,
+            reproduction and elitism). <br><br> Rules of a bridge letter:</p>
+        <ul>
+            <li>(7,5) Matrix.</li>
+            <li>The maximum amount of repetitions per letter is 2, only 2 letters can have a maximum of 3.</li>
+            <li>There are 3 type of relationships: Horizontal, vertical and diagonal.</li>
+            <li>There is a special type of relationship: horizontal and vertical relations can take more than 1 space (A
+                maximum of 2 spaces).</li>
+            <li>Relationships can´t intersect.</li>
+        </ul>
+        <!--Input-->
+        <textarea cols="30" rows="10" maxlength="300" placeholder="Start typing" onkeyup="countChar(this)"></textarea>
+        <!--Count numbers-->
+        <p id="counter">0/300</p>
+        <!--Button-->
+        <button onclick="create()">Create</button>
+    </main>
+</body>
+
+</html>

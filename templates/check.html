@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <!--Title-->
+    <title>Letter bridge</title>
+    <!--Icon link-->
+    <link rel="icon" href="/static/images/bridgeIcon.png" type="image/x-icon">
+    <!--Link css file-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='css/check.css') }}">
+</head>
+
+<body>
+    <script src="{{ url_for('static', path='js/check.js') }}"></script>
+    <!--Header-->
+    <header>
+        <img src="static/images/bridgeHeader.png" width="60" height="60">
+        <h1>LBridge</h1>
+        <nav>
+            <a href="\">Create</a>
+            <a href="check">Check</a>
+            <a href="#">Contact</a>
+            <a href="#">Profile</a>
+        </nav>
+    </header>
+    <main>
+        <!--Text and images-->
+        <h1>AI Bridge generator</h1>
+        <div class="images">
+            <img src="static/images/examples/one.png">
+            <img src="static/images/examples/two.png">
+            <img src="static/images/examples/three.png">
+            <img src="static/images/examples/four.png">
+        </div>
+        <p id="description"> This page will check if your bridge letter is correct or not, we will follow some
+            rules.<br><br> Rules of a bridge letter:</p>
+        <ul>
+            <li>(7,5) Matrix.</li>
+            <li>The maximum amount of repetitions per letter is 2, only 2 letters can have a maximum of 3.</li>
+            <li>There are 3 type of relationships: Horizontal, vertical and diagonal.</li>
+            <li>There is a special type of relationship: horizontal and vertical relations can take more than 1 space (A
+                maximum of 2 spaces).</li>
+            <li>Relationships can´t intersect.</li>
+        </ul>
+        <h3>Sentence</h3>
+        <input type="input" placeholder="Start typing" id="sentence" maxlength="100">
+        <h3>Matrix</h3>
+        <table>
+            <tr>
+                <th></th>
+                <th>Col1</th>
+                <th>Col2</th>
+                <th>Col3</th>
+                <th>Col4</th>
+                <th>Col5</th>
+                <th>Col6</th>
+                <th>Col7</th>
+            </tr>
+            <tr>
+                <td>Row1</td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+            </tr>
+            <tr>
+                <td>Row2</td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+            </tr>
+            <tr>
+                <td>Row3</td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+            </tr>
+            <tr>
+                <td>Row4</td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+            </tr>
+            <tr>
+                <td>Row5</td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+                <td><input type="text" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"></td>
+            </tr>
+        </table>
+        <!--Button-->
+        <button onclick="check()">Check</button>
+    </main>
+</body>
+
+</html>

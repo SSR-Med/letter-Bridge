@@ -1,0 +1,130 @@
+body {
+    color: #7C7A7D;
+}
+
+header {
+    position: absolute;
+    right: 0%;
+    width: 100%;
+    top: 0%;
+    background-color: #332B47;
+    padding-bottom: 1%;
+    max-height: 10%;
+}
+
+
+header img {
+    position: relative;
+    margin-left: 2%;
+    filter: brightness(0) invert(1);
+}
+
+header h1 {
+    position: absolute;
+    margin-left: 1%;
+    display: inline-block;
+    color: white;
+}
+
+header nav {
+    position: absolute;
+    margin-left: 66%;
+    top: 40%;
+    display: flex;
+}
+
+header nav a {
+    margin-inline: 15%;
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    width: 40%;
+}
+
+main h1 {
+    margin-bottom: 6%;
+}
+
+.images {
+    position: relative;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.images img {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    margin-right: 3%;
+}
+
+#description {
+    margin-top: 6%;
+
+}
+
+main ul {
+    margin-bottom: 6%;
+}
+
+main table {
+    position: relative;
+    width: 100%;
+}
+
+td {
+    text-align: center;
+    color: black;
+}
+
+td input {
+    width: 35%;
+    border: hidden;
+    background: transparent;
+}
+
+input:focus {
+    outline: none;
+}
+
+tr:nth-of-type(odd) {
+    background: #eee;
+}
+
+th {
+    background: #333;
+    color: white;
+    font-weight: bold;
+}
+
+main button {
+    background-color: #6DADE0;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    margin-bottom: 5%;
+    float: right;
+}
+
+main button:hover {
+    cursor: pointer;
+}
+
+#sentence {
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: black;
+    width: 80%;
+}
+
+h3 {
+    margin-bottom: 0.6%;
+}
