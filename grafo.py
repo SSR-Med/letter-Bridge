@@ -285,7 +285,7 @@ def graphCreation(sentence):
                        for letter in nx.get_node_attributes(G, 'letter').values()]
         fig = plt.figure()
         nx.draw_networkx(G, pos=nx.get_node_attributes(
-            G, 'pos'), labels=nx.get_node_attributes(G, 'letter'), node_size=500, node_color=node_colors)
+            G, 'pos'), labels=nx.get_node_attributes(G, 'letter'), node_size=500, node_color=node_colors,width=0)
         plt.gca().invert_yaxis()
         plt.box(False)
         matplotlib.use("Agg")
