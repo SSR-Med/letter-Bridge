@@ -104,7 +104,7 @@ def recorrer(dictionary, lista, oracion, idx, pos, matriz, recorrido={}):
 
 def graphCreation(sentence):
     # Sentence modification
-    sentence = ''.join(filter(str.isalnum, sentence)).lower()
+    sentence = ''.join(filter(str.isalnum, sentence)).upper()
     # Get the letters of the sentence
     letters = list(set(x for x in sentence)) + [' ']
     # End of sentence
@@ -220,7 +220,7 @@ def graphCreation(sentence):
         lista = lista[0][0]
         # Count letters used in the graph
         letters = set(letters[:-1])
-        letters2 = list(set("abcdefghijklmnopqrstuvwxyz") - letters)
+        letters2 = list(set("ABCDEFGHIJKLMNOPQRSTUVWXYZ") - letters)
         for letter in letters:
             letters2.append(letter)
         repeticiones = {letter: set() for letter in letters2}
@@ -253,39 +253,39 @@ def graphCreation(sentence):
                     G.add_edge(key, value)
         # Colors for the nodes
         colors = {
-            'a': 'red',
-            'b': 'green',
-            'c': 'blue',
-            'd': 'orange',
-            'e': 'purple',
-            'f': 'brown',
-            'g': 'gray',
-            'h': 'pink',
-            'i': 'teal',
-            'j': 'olive',
-            'k': 'navy',
-            'l': 'salmon',
-            'm': 'gold',
-            'n': 'lime',
-            'o': 'magenta',
-            'p': 'tan',
-            'q': 'skyblue',
-            'r': 'crimson',
-            's': 'darkgreen',
-            't': 'sienna',
-            'u': 'darkblue',
-            'v': 'indigo',
-            'w': 'peru',
-            'x': 'rosybrown',
-            'y': 'darkkhaki',
-            'z': 'cornflowerblue',
-            ' ': 'white'
+            'A': '#f75e5e',
+            'B': '#85e085',
+            'C': '#aee5f7',
+            'D': '#f7b54a',
+            'E': '#d895f7',
+            'F': '#f5f5dc',
+            'G': '#d3d3d3',
+            'H': '#ffb6c1',
+            'I': '#50c878',
+            'J': '#a2c585',
+            'K': '#a0c5f5',
+            'L': '#ffa07a',
+            'M': '#ffd700',
+            'N': '#aeea00',
+            'O': '#f5b7f5',
+            'P': '#f5deb3',
+            'Q': '#87ceeb',
+            'R': '#f59595',
+            'S': '#98fb98',
+            'T': '#a0522d',
+            'U': '#add8e6',
+            'V': '#e8eaf6',
+            'W': '#f5f5f5',  
+            'X': '#f5cdcd',
+            'Y': '#f0e68c',
+            'Z': '#6495ed',
+            ' ': 'white'  
         }
         node_colors = [colors[letter]
                        for letter in nx.get_node_attributes(G, 'letter').values()]
         fig = plt.figure()
         nx.draw_networkx(G, pos=nx.get_node_attributes(
-            G, 'pos'), labels=nx.get_node_attributes(G, 'letter'), node_size=500, node_color=node_colors,width=0)
+            G, 'pos'), labels=nx.get_node_attributes(G, 'letter'),node_size=500,node_color=node_colors)
         plt.gca().invert_yaxis()
         plt.box(False)
         matplotlib.use("Agg")
